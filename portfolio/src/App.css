@@ -2,6 +2,34 @@
   text-align: center;
 }
 
+#info-top {
+	position: absolute;
+	top: 1.5em;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display:block;
+}
+
+.intro-top {
+  color: rgb(212, 212, 212);
+  font-size: 2.45em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro-bottom {
+  color:#4a7577;
+  font-size: 2.45em;
+  font-family: 'Fraunces', serif;
+  font-weight: bolder;
+}
+
+.name{
+  color: #4b8285;
+  font-weight: 900;
+  font-size: 1em;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

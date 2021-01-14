@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
-let scene, camera, renderer, cube
+let scene, camera, renderer, line
 class Animaton extends Component {
 
     init = () => {
@@ -9,17 +9,17 @@ class Animaton extends Component {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
-    var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
+    const geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
+    const edges = new THREE.EdgesGeometry( geometry );
+    line = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0xffffff } ) );
+    scene.add( line );
     camera.position.z = 5;
     }
 
     animate = () => {
         requestAnimationFrame( this.animate );
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        line.rotation.x += 0.01;
+        line.rotation.y += 0.01;
         renderer.render( scene, camera );
     };
 
