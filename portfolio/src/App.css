@@ -11,6 +11,15 @@
 	display:block;
 }
 
+#info-bottom{
+  position: absolute;
+	bottom: 4em;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display:block;
+}
+
 .intro-top {
   color: rgb(212, 212, 212);
   font-size: 2.45em;
@@ -23,11 +32,24 @@
   font-family: 'Fraunces', serif;
   font-weight: bolder;
 }
+canvas {
+  display: block;
+}
 
 .name{
   color: #4b8285;
   font-weight: 900;
   font-size: 1em;
+}
+
+.view-more {
+  color: #4a7577 !important;
+  border-color: #4a7577 !important;
+}
+
+#projects {
+  height: 800px;
+  width: 100%;
 }
 
 .App-logo {
