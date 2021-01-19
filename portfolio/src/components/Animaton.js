@@ -9,7 +9,7 @@ class Animaton extends Component {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize( window.innerWidth - 16, window.innerHeight );
+    renderer.setSize( window.innerWidth - 15, window.innerHeight );
     document.body.prepend(renderer.domElement );
     const geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
     const edges = new THREE.EdgesGeometry( geometry );
@@ -19,7 +19,7 @@ class Animaton extends Component {
     scene.add( line );
     scene.add( innerline )
     starGeo = new THREE.Geometry();
-    for (let i = 0; i < 30000; i++){
+    for (let i = 0; i < 10000; i++){
         star = new THREE.Vector3(
             Math.random() * 600 - 300,
             Math.random() * 600 - 300,
@@ -29,10 +29,10 @@ class Animaton extends Component {
         star.acceleration = 0.001;
         starGeo.vertices.push(star)
     }
-    let sprite = new THREE.TextureLoader().load('star.png');
+    let sprite = new THREE.TextureLoader().load('star2.png');
     let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 0.16,
+        size: 0.12,
         map: sprite
     })
     stars = new THREE.Points(starGeo, starMaterial)
@@ -61,11 +61,11 @@ class Animaton extends Component {
     onWindowResize = () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth - 16, window.innerHeight)
+        renderer.setSize(window.innerWidth - 15, window.innerHeight)
     }
 
     scrollToBottom = () => {
-        document.getElementById('projects').scrollIntoView({behavior: "smooth"})
+        document.getElementById('nav').scrollIntoView({behavior: "smooth"})
     }
 
     componentDidMount(){
