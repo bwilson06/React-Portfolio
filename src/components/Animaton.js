@@ -33,7 +33,7 @@ class Animaton extends Component {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.prepend(renderer.domElement);
     renderer.domElement.classList.add("canvas");
-    const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
+    const geometry = new THREE.BoxBufferGeometry(1.5, 1.5, 1.5);
     const edges = new THREE.EdgesGeometry(geometry);
     lineColor = 0xffffff;
     innerline = new THREE.LineSegments(
@@ -44,6 +44,8 @@ class Animaton extends Component {
       edges,
       new THREE.LineBasicMaterial({ color: lineColor })
     );
+    line.position.y = .5
+    innerline.position.y = .5
     scene.add(line);
     scene.add(innerline);
     starGeo = new THREE.Geometry();
@@ -66,7 +68,7 @@ class Animaton extends Component {
     });
     stars = new THREE.Points(starGeo, starMaterial);
     scene.add(stars);
-    camera.position.z = 6;
+    camera.position.z = 5;
   };
 
   animate = () => {

@@ -55,12 +55,11 @@ body {
 
 .view-more {
   color: #4a7577 !important;
-  border-color: red !important;
+  border-color: #4a7577 !important;
   animation: view-more-animation 1s 1;
   animation-delay: 3s;
-  margin-bottom: 100px;
+  transform: translateY(-100px);
   width: 200px;
-  height: 60px;
 }
 
 #projects {
