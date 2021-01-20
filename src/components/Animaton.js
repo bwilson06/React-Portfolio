@@ -91,7 +91,7 @@ class Animaton extends Component {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    this.setState({ windowHeight: window.innerHeight });
+    this.setState({ windowHeight: window.innerWidth });
   };
 
   scrollToBottom = () => {
