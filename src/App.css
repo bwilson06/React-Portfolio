@@ -41,7 +41,7 @@ body {
 
 .canvas {
   min-width: 100%;
-  max-height: 90vh;
+  max-height: 80vh;
 }
 
 .name{
@@ -52,7 +52,7 @@ body {
 }
 
 .view-more {
-  color: red !important;
+  color: pink !important;
   border-color: #4a7577 !important;
   animation: view-more-animation 1s 1;
   animation-delay: 3s;
