@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import Button from "react-bootstrap/Button";
-import Div100vh from 'react-div-100vh';
+
 let scene,
   camera,
   renderer,
@@ -22,7 +22,7 @@ class Animaton extends Component {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(
       75,
-      window.innerWidth / window.innerHeight,
+      window.innerWidth / (window.innerHeight - 56),
       0.1,
       1000
     );
@@ -30,7 +30,7 @@ class Animaton extends Component {
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
     controls.enablePan = false;
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight - 56);
     document.body.prepend(renderer.domElement);
     renderer.domElement.classList.add("canvas");
     const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
@@ -88,10 +88,10 @@ class Animaton extends Component {
   };
 
   onWindowResize = () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = window.innerWidth / (window.innerHeight - 56);
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    this.setState({ windowHeight: window.innerWidth });
+    renderer.setSize(window.innerWidth, window.innerHeight - 56);
+    this.setState({ windowHeight: window.innerHeight });
   };
 
   scrollToBottom = () => {
@@ -106,7 +106,7 @@ class Animaton extends Component {
 
   render() {
     return (
-      <Div100vh>
+      <div>
         <div id="info-top">
           <h1 className="intro-top">
             Hello, I'm<span className="name"> Bradley Wilson</span>
@@ -123,7 +123,7 @@ class Animaton extends Component {
           </Button>{" "}
           <h1>{this.state.windowHeight || window.innerHeight}</h1>
         </div>
-      </Div100vh>
+      </div>
     );
   }
 }
