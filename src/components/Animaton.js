@@ -22,7 +22,7 @@ class Animaton extends Component {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(
       75,
-      window.innerWidth / (window.innerHeight - 56),
+      window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
@@ -30,7 +30,7 @@ class Animaton extends Component {
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
     controls.enablePan = false;
-    renderer.setSize(window.innerWidth, window.innerHeight - 56);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.prepend(renderer.domElement);
     renderer.domElement.classList.add("canvas");
     const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
@@ -88,10 +88,10 @@ class Animaton extends Component {
   };
 
   onWindowResize = () => {
-    camera.aspect = window.innerWidth / (window.innerHeight - 56);
+    camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight - 56);
-    this.setState({ windowHeight: window.innerHeight });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    this.setState({ windowHeight: window.innerWidth });
   };
 
   scrollToBottom = () => {
@@ -119,9 +119,8 @@ class Animaton extends Component {
             className="view-more"
             variant="outline-success"
           >
-            View my work
+            About Me
           </Button>{" "}
-          <h1>{this.state.windowHeight || window.innerHeight}</h1>
         </div>
       </div>
     );
