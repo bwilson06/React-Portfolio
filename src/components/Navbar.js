@@ -24,7 +24,7 @@ class Navbar extends Component {
     stickyNav = (sticky, navbar) => {
         console.log(sticky[0].clientHeight)
         console.log(window.pageYOffset, this.state.canvasHeight)
-        if (window.pageYOffset >= sticky[0].clientHeight -10) {
+        if (window.pageYOffset >= sticky[0].clientHeight -100) {
             navbar.classList.add("sticky")
           } else {
             navbar.classList.remove("sticky")
