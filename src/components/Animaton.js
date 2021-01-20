@@ -34,7 +34,7 @@ class Animaton extends Component {
     console.log(sprite)
     let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 0.016,
+        size: 1,
         map: sprite
     })
     stars = new THREE.Points(starGeo, starMaterial)
