@@ -66,7 +66,7 @@ class Animaton extends Component {
     });
     stars = new THREE.Points(starGeo, starMaterial);
     scene.add(stars);
-    camera.position.z = 5;
+    camera.position.z = 6;
   };
 
   animate = () => {
@@ -88,9 +88,9 @@ class Animaton extends Component {
   };
 
   onWindowResize = () => {
-    camera.aspect = window.innerWidth / this.state.windowHeight;
+    camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, this.state.windowHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     this.setState({ windowHeight: window.innerWidth });
   };
 

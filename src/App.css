@@ -58,6 +58,9 @@ body {
   border-color: #4a7577 !important;
   animation: view-more-animation 1s 1;
   animation-delay: 3s;
+  margin-bottom: 40px;
+  width: 120px;
+  height: 40px;
 }
 
 #projects {
