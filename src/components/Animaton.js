@@ -12,7 +12,7 @@ class Animaton extends Component {
 
     init = () => {
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1000 );
+    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     renderer = new THREE.WebGLRenderer({ antialias: true });
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableZoom = false;
@@ -71,7 +71,7 @@ class Animaton extends Component {
     onWindowResize = () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-        //renderer.setSize(window.innerWidth, window.innerHeight)
+        renderer.setSize(window.innerWidth, window.innerHeight)
         this.setState({windowHeight: window.innerHeight})
     }
 
