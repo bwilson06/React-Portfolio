@@ -60,11 +60,11 @@ canvas {
 
 nav {
   width: 100%;
-  min-height: 5%;
+  min-height: 5vh;
   background-color: #4a7577;
-  border-width: 0px 0px 1.8px 0px;
+  border-width: 0px 0px 3px 0px;
   border-style: double;
-  border-color: #28a745;
+  border-color: #4a7577;
   z-index: 100;
 }
 .nav-links {
@@ -145,7 +145,6 @@ nav {
   transition: 0.5s ease-in !important;
 }
 
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -190,7 +189,7 @@ nav {
     display: flex;
     position: absolute;
     display: flex;
-    top: 107.5vh;
+    top: 104.9%;
     flex-direction: column;
     padding: 0 20px;
     background-color: #4a7577;

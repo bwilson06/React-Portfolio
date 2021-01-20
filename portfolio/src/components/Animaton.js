@@ -11,6 +11,7 @@ class Animaton extends Component {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize( window.innerWidth - 15, window.innerHeight );
     document.body.prepend(renderer.domElement );
+    renderer.domElement.classList.add("canvas")
     const geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
     const edges = new THREE.EdgesGeometry( geometry );
     lineColor = 0xffffff

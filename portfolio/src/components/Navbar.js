@@ -6,7 +6,7 @@ class Navbar extends Component {
         isActive: false,
         h1className: "",
         ulclassName: "nav-links",
-        navOffsetTop: 0
+        canvasHeight: 0
     }
 
     toggleNav = () => {
@@ -25,27 +25,27 @@ class Navbar extends Component {
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
           } else {
-            navbar.classList.remove("sticky");
+            navbar.classList.remove("sticky")
           }
     }
 
-    onWindowResize = (navbar) => {
-        console.log("hi")
-        this.setState({navOffsetTop: navbar.offsetTop})
+    onWindowResize = (canvas) => {
+        this.setState({canvasHeight: canvas[0].clientHeight})
     }
 
     componentDidMount(){
+        let canvas = document.getElementsByClassName("canvas")
         let navbar = document.getElementById('nav')
-        this.setState({navOffsetTop: navbar.offsetTop})
-        window.addEventListener("scroll", () => this.stickyNav(this.state.navOffsetTop, navbar), false)
-        window.addEventListener("resize", () => this.onWindowResize(navbar), false)
+        this.setState({canvasHeight: canvas[0].clientHeight})
+        window.addEventListener("scroll", () => this.stickyNav(this.state.canvasHeight, navbar), false)
+        window.addEventListener("resize", () => this.onWindowResize(canvas), false)
     }
     
     render() {
         console.log(this.state)
         return (
             <nav id="nav">
-                <ul className={this.state.ulclassName}>
+                <ul name="hello" className={this.state.ulclassName}>
                     <li><h1 className={this.state.h1className}>Home</h1></li>
                     <li><h1 className={this.state.h1className}>About</h1></li>
                     <li><h1 className={this.state.h1className}>Portfolio</h1></li>
