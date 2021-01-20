@@ -22,7 +22,6 @@ class Navbar extends Component {
     }
 
     stickyNav = (sticky, navbar) => {
-        this.setState({canvasHeight: sticky[0].clientHeight})
         console.log(window.pageYOffset, this.state.canvasHeight)
         if (window.pageYOffset >= sticky[0].clientHeight) {
             navbar.classList.add("sticky")
@@ -49,7 +48,6 @@ class Navbar extends Component {
     render() {
         console.log(this.state)
         return (
-            <div>
             <nav id="nav">
                 <ul name="hello" className={this.state.ulclassName}>
                     <li><h1 className={this.state.h1className}>Home</h1></li>
@@ -63,7 +61,6 @@ class Navbar extends Component {
                     <div className="line"></div>
                 </div>
             </nav>
-            </div>
         );
     }
 }

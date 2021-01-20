@@ -155,6 +155,12 @@ nav {
   transition: 0.5s ease-in !important;
 }
 
+.nav2{
+  width: 100%;
+  background-color: #4a7577;
+  height: 50px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
