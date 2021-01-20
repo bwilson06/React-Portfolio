@@ -33,6 +33,9 @@ class Animaton extends Component {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.prepend(renderer.domElement);
     renderer.domElement.classList.add("canvas");
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    renderer.domElement.style.setProperty('--vh', `${vh}px`)
     const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
     const edges = new THREE.EdgesGeometry(geometry);
     lineColor = 0xffffff;
