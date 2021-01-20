@@ -30,13 +30,13 @@ class Navbar extends Component {
     }
 
     onWindowResize = (canvas) => {
-        this.setState({canvasHeight: canvas[0].scrollHeight})
+        this.setState({canvasHeight: canvas[0].clientHeight})
     }
 
     componentDidMount(){
         let canvas = document.getElementsByClassName("canvas")
         let navbar = document.getElementById('nav')
-        this.setState({canvasHeight: canvas[0].scrollHeight})
+        this.setState({canvasHeight: canvas[0].clientHeight})
         window.addEventListener("scroll", () => this.stickyNav(this.state.canvasHeight, navbar), false)
         window.addEventListener("resize", () => this.onWindowResize(canvas), false)
     }
