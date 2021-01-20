@@ -43,7 +43,7 @@ class Animaton extends Component {
     })
     stars = new THREE.Points(starGeo, starMaterial)
     scene.add( stars )
-    camera.position.z = 8;
+    camera.position.z = 15;
     }
 
     animate = () => {
