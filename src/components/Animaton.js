@@ -12,7 +12,7 @@ class Animaton extends Component {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableZoom = false;
-    controls.enableRotate = false;
+    controls.enablePan = false;
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.prepend(renderer.domElement );
     renderer.domElement.classList.add("canvas")
