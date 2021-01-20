@@ -42,12 +42,10 @@ body {
 .canvas {
   min-width: 100%;
   height: 100%;
-  position: fixed;
-  overflow-y: hidden;
 }
 
 .name{
-  color: teal;
+  color: #4a7577;
   font-weight: 900;
   font-size: 1em;
   animation: text 3s 1;

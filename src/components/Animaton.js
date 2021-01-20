@@ -6,6 +6,10 @@ import Button from 'react-bootstrap/Button';
 let scene, camera, renderer, line, starGeo, star, stars, innerline, lineColor, controls
 class Animaton extends Component {
 
+    state = {
+        windowHeight: 0
+    }
+
     init = () => {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1000 );
@@ -13,7 +17,7 @@ class Animaton extends Component {
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableZoom = false;
     controls.enablePan = false;
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.prepend(renderer.domElement );
     renderer.domElement.classList.add("canvas")
     const geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
@@ -67,7 +71,8 @@ class Animaton extends Component {
     onWindowResize = () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth - 15, window.innerHeight)
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        this.setState({windowHeight: window.innerHeight})
     }
 
     scrollToBottom = () => {
@@ -84,6 +89,7 @@ class Animaton extends Component {
         return (
         <div id="info-bottom">
         <Button onClick={this.scrollToBottom} className="view-more" variant="outline-success">View my work</Button>{' '}
+        <h1>{this.state.windowHeight || window.innerHeight}</h1>
         </div>
         );
     }
