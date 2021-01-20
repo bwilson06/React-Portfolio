@@ -49,6 +49,7 @@ class Navbar extends Component {
     render() {
         console.log(this.state)
         return (
+            <div>
             <nav id="nav">
                 <ul name="hello" className={this.state.ulclassName}>
                     <li><h1 className={this.state.h1className}>Home</h1></li>
@@ -62,6 +63,7 @@ class Navbar extends Component {
                     <div className="line"></div>
                 </div>
             </nav>
+            </div>
         );
     }
 }
