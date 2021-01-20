@@ -30,7 +30,13 @@ class Animaton extends Component {
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
     controls.enablePan = false;
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    if (window.innerWidth > 500){
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    }else{
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        renderer.domElement.style.setProperty('--vh', `${vh}px`);
+    }
     document.body.prepend(renderer.domElement);
     renderer.domElement.classList.add("canvas");
     const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
@@ -88,10 +94,16 @@ class Animaton extends Component {
   };
 
   onWindowResize = () => {
+    if (window.innerWidth > 500){
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
     this.setState({ windowHeight: window.innerWidth });
+    }else{
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        renderer.domElement.style.setProperty('--vh', `${vh}px`);
+    }
   };
 
   scrollToBottom = () => {
