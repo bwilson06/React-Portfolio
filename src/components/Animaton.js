@@ -13,7 +13,6 @@ class Animaton extends Component {
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableZoom = false;
     controls.enablePan = false;
-    controls.enableRotate = false;
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.prepend(renderer.domElement );
     renderer.domElement.classList.add("canvas")
