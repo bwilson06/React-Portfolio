@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import Button from "react-bootstrap/Button";
-
+import Div100vh from 'react-div-100vh';
 let scene,
   camera,
   renderer,
@@ -106,7 +106,7 @@ class Animaton extends Component {
 
   render() {
     return (
-      <div>
+      <Div100vh>
         <div id="info-top">
           <h1 className="intro-top">
             Hello, I'm<span className="name"> Bradley Wilson</span>
@@ -123,7 +123,7 @@ class Animaton extends Component {
           </Button>{" "}
           <h1>{this.state.windowHeight || window.innerHeight}</h1>
         </div>
-      </div>
+      </Div100vh>
     );
   }
 }
