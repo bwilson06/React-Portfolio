@@ -41,7 +41,7 @@ body {
 
 .canvas {
   min-width: 100%;
-  max-height: max-content;
+  max-height: 100%;
   overflow-y: hidden;
 }
 
