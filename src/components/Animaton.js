@@ -33,7 +33,7 @@ class Animaton extends Component {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.prepend(renderer.domElement);
     renderer.domElement.classList.add("canvas");
-    const geometry = new THREE.BoxBufferGeometry(1, 1, 1);
+    const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
     const edges = new THREE.EdgesGeometry(geometry);
     lineColor = 0xffffff;
     innerline = new THREE.LineSegments(
