@@ -22,8 +22,9 @@ class Navbar extends Component {
     }
 
     stickyNav = (sticky, navbar) => {
+        this.setState({canvasHeight: sticky[0].clientHeight})
         console.log(window.pageYOffset, this.state.canvasHeight)
-        if (window.pageYOffset >= sticky) {
+        if (window.pageYOffset >= sticky[0].clientHeight) {
             navbar.classList.add("sticky")
           } else {
             navbar.classList.remove("sticky")
@@ -41,7 +42,7 @@ class Navbar extends Component {
         let canvas = document.getElementsByClassName("canvas")
         let navbar = document.getElementById('nav')
         this.setState({canvasHeight: canvas[0].clientHeight})
-        window.addEventListener("scroll", () => this.stickyNav(this.state.canvasHeight, navbar), false)
+        window.addEventListener("scroll", () => this.stickyNav(canvas, navbar), false)
         window.addEventListener("resize", () => this.onWindowResize(canvas), false)
     }
     
