@@ -9,7 +9,7 @@ class Animaton extends Component {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize( window.innerWidth - 15, window.innerHeight );
+    renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.prepend(renderer.domElement );
     renderer.domElement.classList.add("canvas")
     const geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
@@ -30,10 +30,11 @@ class Animaton extends Component {
         star.acceleration = 0.001;
         starGeo.vertices.push(star)
     }
-    let sprite = new THREE.TextureLoader().load('star2.png');
+    let sprite = new THREE.TextureLoader().load("star2.png")
+    console.log(sprite)
     let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 0.12,
+        size: 1,
         map: sprite
     })
     stars = new THREE.Points(starGeo, starMaterial)
@@ -42,7 +43,7 @@ class Animaton extends Component {
     }
 
     animate = () => {
-        starGeo.vertices.forEach((p, i) =>{
+        starGeo.vertices.forEach((p) =>{
             p.velocity += p.acceleration;
             p.y -= p.velocity
             if (p.y < -200){

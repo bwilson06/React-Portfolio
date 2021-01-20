@@ -34,8 +34,9 @@
   font-weight: 900;
   animation: text2 3s 1;
 }
-canvas {
-  display: block;
+
+.canvas {
+  max-width: 100%;
 }
 
 .name{
