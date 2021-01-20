@@ -174,11 +174,11 @@ nav {
 @keyframes text2 {
   0%{
     color: black;
+    transform: translateX(-100%);
   }
   90%{
     opacity: 0;
     color: black;
-    margin-top: 100px;
   }
 }
 
