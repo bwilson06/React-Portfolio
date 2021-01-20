@@ -47,7 +47,7 @@ body {
 }
 
 .name{
-  color: #4a7577;
+  color: red;
   font-weight: 900;
   font-size: 1em;
   animation: text 3s 1;
@@ -103,7 +103,7 @@ nav {
 }
 
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
 }
 
