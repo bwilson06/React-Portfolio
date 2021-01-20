@@ -22,11 +22,15 @@ class Navbar extends Component {
     }
 
     stickyNav = (sticky, navbar) => {
+        console.log(window.pageYOffset, this.state.canvasHeight)
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
           } else {
             navbar.classList.remove("sticky")
-          }
+        }
+        if (this.state.isActive && window.pageYOffset <= this.state.canvasHeight){
+            this.setState({isActive: false, h1className: "", ulclassName: "nav-links"})
+        }
     }
 
     onWindowResize = (canvas) => {
