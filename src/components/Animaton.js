@@ -13,6 +13,7 @@ class Animaton extends Component {
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableZoom = false;
     controls.enablePan = false;
+    controls.enableRotate = false;
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.prepend(renderer.domElement );
     renderer.domElement.classList.add("canvas")
@@ -43,7 +44,7 @@ class Animaton extends Component {
     })
     stars = new THREE.Points(starGeo, starMaterial)
     scene.add( stars )
-    camera.position.z = 15;
+    camera.position.z = 5;
     }
 
     animate = () => {
