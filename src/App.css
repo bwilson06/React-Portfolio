@@ -58,7 +58,7 @@ body {
   border-color: #4a7577 !important;
   animation: view-more-animation 1s 1;
   animation-delay: 3s;
-  transform: translateY(-100px);
+  transform: translateY(-160px);
   width: 200px;
 }
 
@@ -189,7 +189,7 @@ nav {
 
 @keyframes view-more-animation {
   50%{
-    transform: translateY(-50%);
+    transform: translateY(-150px);
     background-color: #28a745;
   }
 }
