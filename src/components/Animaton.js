@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import Button from 'react-bootstrap/Button';
 
-let scene, camera, renderer, line, starGeo, star, stars, innerline, lineColor
+let scene, camera, renderer, line, starGeo, star, stars, innerline, lineColor, controls
 class Animaton extends Component {
 
     init = () => {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1000 );
     renderer = new THREE.WebGLRenderer({ antialias: true });
+    controls = new OrbitControls(camera, renderer.domElement );
+    controls.enableZoom = false;
+    controls.enableRotate = false;
+    controls.enablePan = false;
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.prepend(renderer.domElement );
     renderer.domElement.classList.add("canvas")
