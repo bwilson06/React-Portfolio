@@ -11,7 +11,7 @@ class Animaton extends Component {
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1000 );
     renderer = new THREE.WebGLRenderer({ antialias: true });
     controls = new OrbitControls(camera, renderer.domElement)
-    controls.touches.TWO = THREE.TOUCH.ZOOM;
+    controls.enableZoom = false;
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.prepend(renderer.domElement );
     renderer.domElement.classList.add("canvas")
