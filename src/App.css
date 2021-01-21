@@ -204,24 +204,27 @@ nav {
   .nav-links{
     display: flex;
     position: absolute;
-    display: flex;
-    top: 104.9%;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 0px;
     background-color: #4a7577;
     width: 100%;
+    min-height: 50vh;
+    top: 106%;
     transform: translateX(-100%);
   }
   nav {
     text-align: center;
   }
   .nav-links h1 {
-    display: none;
+    display: flex;
     font-size: 30px;
     padding: 10px;
   }
   .burger{
     display: block;
     padding: 15px;
+  }
+  .yo{
+    top: 106% !important;
   }
 }

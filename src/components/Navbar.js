@@ -11,6 +11,7 @@ class Navbar extends Component {
 
     toggleNav = () => {
         this.setState({isActive: !this.state.isActive}, this.addClass)
+        console.log(document.getElementsByClassName("canvas")[0].clientHeight, document.getElementsByClassName("nav-links")[0].offsetTop)
     }
 
     addClass = () => {
@@ -22,13 +23,13 @@ class Navbar extends Component {
     }
 
     stickyNav = (sticky, navbar) => {
+        let navitems = document.getElementsByClassName("nav-links")[0]
         if (window.pageYOffset >= sticky[0].clientHeight) {
             navbar.classList.add("sticky")
+            navitems.classList.remove("yo")
           } else {
             navbar.classList.remove("sticky")
-        }
-        if (this.state.isActive && window.pageYOffset <= this.state.canvasHeight){
-            this.setState({isActive: false, h1className: "", ulclassName: "nav-links"})
+            navitems.classList.add("yo")
         }
     }
 
@@ -45,7 +46,6 @@ class Navbar extends Component {
     }
     
     render() {
-        console.log(this.state)
         return (
             <nav id="nav">
                 <ul name="hello" className={this.state.ulclassName}>
