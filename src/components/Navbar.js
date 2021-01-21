@@ -31,6 +31,9 @@ class Navbar extends Component {
             navbar.classList.remove("sticky")
             navitems.classList.add("yo")
         }
+        if (window.pageYOffset <= sticky[0].clientHeight && this.state.isActive){
+            this.setState({isActive: false, h1className: "", ulclassName: "nav-links"})
+        }
     }
 
     onWindowResize = (canvas) => {
