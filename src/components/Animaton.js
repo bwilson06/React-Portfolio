@@ -49,7 +49,7 @@ class Animaton extends Component {
     scene.add(line);
     scene.add(innerline);
     starGeo = new THREE.Geometry();
-    for (let i = 0; i < 100000; i++) {
+    for (let i = 0; i < 10000; i++) {
       star = new THREE.Vector3(
         Math.random() * 600 - 300,
         Math.random() * 600 - 300,

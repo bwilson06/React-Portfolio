@@ -1,14 +1,15 @@
 import "./App.css";
 import Animation from "./components/Animaton";
-import Projects from "./components/Projects";
-import Navbar from "./components/Navbar";
+import About from "./components/About";
+import MainNav from "./components/MainNav";
+
 
 function App() {
   return (
     <div>
       <Animation />
-      <Navbar />
-      <Projects />
+      <MainNav />
+      <About />
     </div>
   );
 }

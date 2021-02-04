@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 
-class Projects extends Component {
-
+class About extends Component {
     render() {
         return (
             <div id="projects">
-
+                <h1 className="header">About</h1>
             </div>
         );
     }
 }
 
-export default Projects;
+export default About;
