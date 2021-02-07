@@ -26,14 +26,14 @@ const MainNav = () => {
 
   return (
     <Navbar id="nav" expand="lg">
-      <Navbar.Brand style={{color: "white", fontSize: "30px"}}>BW</Navbar.Brand>
+      <Navbar.Brand className="nav-header">BW</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link style={{color: "white"}}>Home</Nav.Link>
-          <Nav.Link style={{color: "white"}}>About</Nav.Link>
-          <Nav.Link style={{color: "white"}}>Projects</Nav.Link>
-          <Nav.Link style={{color: "white"}}>Contact</Nav.Link>
+        <Nav className="nav-links" className="mr-auto">
+          <Nav.Link >Home</Nav.Link>
+          <Nav.Link >About</Nav.Link>
+          <Nav.Link >Projects</Nav.Link>
+          <Nav.Link >Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
