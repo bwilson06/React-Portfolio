@@ -161,7 +161,7 @@ body {
 
 .my-content {
   width: 50%; 
-  height: auto
+  height: auto;
 }
 
 
@@ -216,5 +216,6 @@ body {
     margin: 0 auto;
     width: 100%;
     margin-top: 40px;
+    text-align: center;
   }
 }
