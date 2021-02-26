@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { Container, Carousel } from "react-bootstrap";
-import me from "../images/me.jpg";
+import { Container, Carousel} from "react-bootstrap";
+import dogstr from "../images/dogstr.png";
+import chatty from "../images/chatty.png";
 
 const Projects = () => {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
-    console.log(selectedIndex);
   };
 
   const scroll = (e) => {
       e.preventDefault()
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   }
 
   return (
@@ -25,27 +26,17 @@ const Projects = () => {
         </div>
         <Carousel id="carousel" activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item>
-            <img className="d-block carousel-image" src={me} alt="First slide" />
+            <img className="d-block carousel-image" src={dogstr} alt="First slide" />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Dogstr</h3>
+              <p>Search for top rated Dog Parks in your area.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block carousel-image" src={me} alt="Second slide" />
+            <img className="d-block carousel-image" src={chatty} alt="Second slide" />
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block carousel-image" src={me} alt="Third slide" />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h3>Chatty</h3>
+              <p>Instantly connect/chat with people around the world.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

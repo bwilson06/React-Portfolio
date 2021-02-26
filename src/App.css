@@ -202,7 +202,6 @@ body {
 }
 
 .carousel-image {
-  width: 70%;
   margin: 0 auto;
   max-height: 500px;
   width: auto;  
@@ -212,6 +211,39 @@ body {
   text-align: center;
   margin-top: 50px;
   cursor: pointer;
+}
+
+.carousel-caption {
+  color: black !important;
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+#contact {
+  height: 102vh;
+}
+
+.contact-header-container {
+  background-color: #383b3e;
+  height: 100px;
+  width: 220px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 30px;
+  color: white;
+}
+
+.contact-header {
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+
+.contact-form {
+  box-shadow: 1px 1px 10px 0px #20232A;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 
@@ -266,5 +298,8 @@ body {
     width: 100%;
     margin-top: 40px;
     text-align: center;
+  }
+  .carousel-image {
+    max-width: 500px;
   }
 }
