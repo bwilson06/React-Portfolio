@@ -4,23 +4,26 @@ import { Container } from "react-bootstrap";
 import myPic from "../images/me.jpg";
 
 const About = () => {
-  const [projectDivY, setY] = useState();
 
-  const animate = (projectsDiv) => {
-    if (window.pageYOffset >= projectsDiv.offsetTop - 71) {
+  const animate = () => {
+    if (window.pageYOffset >= 20) {
       document
         .getElementsByClassName("about-header-container")[0]
-        .classList.add("yo");
+        .classList.add("aboutme-animation");
     }
   };
 
+  const scroll = (e) => {
+    e.preventDefault()
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+  }
+
   useEffect(() => {
-    let projectsDiv = document.getElementById("projects");
-    window.addEventListener("scroll", () => animate(projectsDiv), false);
+    window.addEventListener("scroll", () => animate(), false);
   }, []);
 
   return (
-    <div id="projects">
+    <div id="about">
       <Container>
         <div className="about-header-container">
           <h1 className="about-header">About</h1>
@@ -37,6 +40,7 @@ const About = () => {
             <p style={{overflowWrap: "break-word", fontSize: "20px", fontFamily: 'Poppins'}}>My passion for programming ultimately began when I discovered that I could create almost anything that came to mind by utlizing small IoT devices such as Arduino©. My first projects were mostly hobbyist home automation systems that were fueled by a desire to learn more about the world of computer science. In the end that desire led me to begin my journey as a Full-Stack Web Developer, creating innovative apps with an inspiration to change the world around me. </p>
             </div>
         </div>
+        <h1 onClick={(e) => scroll(e)} className="about-scroll"><i class="fas fa-arrow-circle-down"></i></h1>
       </Container>
     </div>
   );

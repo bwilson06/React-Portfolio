@@ -3,6 +3,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  background-color: rgb(226, 226, 226) !important;
 }
 
 .App {
@@ -62,8 +63,8 @@ body {
   width: 200px;
 }
 
-#projects {
-  height: 1200px;
+#about {
+  height: auto;
   width: 100%;
   background-color: rgb(226, 226, 226);
   overflow: auto;
@@ -79,6 +80,7 @@ body {
 
 #nav{
   background-color: #4a7577;
+  z-index: 100;
 }
 
 .sticky {
@@ -88,7 +90,7 @@ body {
 }
 
 .about-header-container {
-  background-color: #74c69d;
+  background-color: #383b3e;
   height: 100px;
   width: 220px;
   margin: 0 auto;
@@ -98,7 +100,7 @@ body {
   display: none;
 }
 
-.yo {
+.aboutme-animation{
   display: block;
   animation: about-me-animation 1s 1;
 }
@@ -164,6 +166,53 @@ body {
   height: auto;
 }
 
+.about-scroll {
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#projects {
+  height: auto;
+}
+
+.projects-header-container {
+  background-color: #383b3e;
+  height: 100px;
+  width: 220px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 30px;
+  color: white;
+}
+
+.projects-header {
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+
+#carousel {
+  top: 40px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 10px 0px #20232A;
+  background-color: #383b3e;
+}
+
+.carousel-image {
+  width: 70%;
+  margin: 0 auto;
+  max-height: 500px;
+  width: auto;  
+}
+
+.projects-scroll {
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+}
 
 
 @keyframes text {
