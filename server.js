@@ -21,7 +21,7 @@ var transporter = nodemailer.createTransport({
     requireTLS: true,
     auth: {
            user: 'bluedirtbike6@gmail.com',
-           pass: "notmypassword"
+           pass: process.env.REACT_APP_PASS
        }
 });
 
