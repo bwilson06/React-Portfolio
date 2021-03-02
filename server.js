@@ -4,7 +4,7 @@ require('dotenv').config()
 
 let app = express();
 
-let PORT = 3001 || process.env.PORT
+var PORT = process.env.PORT || 3001;
 
 //parser
 app.use(express.urlencoded({ extended: true }));
