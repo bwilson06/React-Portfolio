@@ -184,6 +184,7 @@ body {
   font-family: 'Roboto', sans-serif;
   border-radius: 30px;
   color: white;
+  display: none;
 }
 
 .projects-header {
@@ -231,6 +232,7 @@ body {
   font-family: 'Roboto', sans-serif;
   border-radius: 30px;
   color: white;
+  display: none;
 }
 
 .contact-header {
@@ -246,6 +248,15 @@ body {
   margin-top: 40px;
 }
 
+.projects-animation{ 
+  display: block;
+  animation: projects-animation 1s 1;
+}
+
+.contact-animation {
+  display: block;
+  animation: contact-animation 1s 1;
+}
 
 @keyframes text {
   0%{
@@ -285,6 +296,25 @@ body {
     transform: translateX(0);
   }
 }
+
+@keyframes projects-animation {
+  0%{
+    transform: translateX(-200%)
+  }
+  50%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes contact-animation {
+  0%{
+    transform: translateX(-200%)
+  }
+  50%{
+    transform: translateX(0);
+  }
+}
+
 
 @media screen and (max-width: 991px) {
   .about-content-container {

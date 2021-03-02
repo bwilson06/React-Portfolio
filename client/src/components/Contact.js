@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import axios from "axios";
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -23,12 +24,29 @@ const Contact = () => {
 
   const submitContactRequest = (e) => {
       e.preventDefault()
-      setName('')
+      /*setName('')
       setEmail('')
       setMessage('')
+      */
+     let user = {
+       name: name,
+       email: email,
+       message: message
+     }
+     axios({
+      method: "POST", 
+      url:"http://localhost:3000/send", 
+      data: user
+    }).then((response)=>{
+      if (response.data.status === 'success') {
+        alert("Message Sent."); 
+      } else if(response.data.status === 'fail') {
+        alert("Message failed to send.")
+      }
+    })
   }
   return (
-    <div id="contact">
+    <div id="contact" className="contact">
       <Container>
         <hr></hr>
         <div className="contact-header-container">
@@ -40,15 +58,15 @@ const Contact = () => {
         <Form className="contact-form">
           <Form.Group onChange={(e) => updateName(e)} controlId="formGroupName">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="name" placeholder="Enter name" />
+            <Form.Control type="name" value={name} placeholder="Enter name"/>
           </Form.Group>
           <Form.Group onChange={(e) => updateEmail(e)} controlId="formGroupEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" value={email} placeholder="Enter email" />
           </Form.Group>
           <Form.Group onChange={(e) => updateMessage(e)} controlId="exampleForm.ControlTextarea1">
             <Form.Label>Message</Form.Label>
-            <Form.Control as="textarea" rows={6} />
+            <Form.Control as="textarea" value={message} rows={6} />
           </Form.Group>
           <Button onClick={(e) => submitContactRequest(e)} variant="outline-primary">Submit</Button>
         </Form>

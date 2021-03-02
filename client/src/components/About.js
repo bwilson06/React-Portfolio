@@ -11,6 +11,14 @@ const About = () => {
         .getElementsByClassName("about-header-container")[0]
         .classList.add("aboutme-animation");
     }
+    let projectsDiv = document.getElementsByClassName('projects')[0]
+    let contactDiv = document.getElementsByClassName('contact')[0]
+    if (window.pageYOffset >= projectsDiv.clientHeight + 210){
+      document.getElementsByClassName("projects-header-container")[0].classList.add("projects-animation")
+    }
+    if (window.pageYOffset >= contactDiv.clientHeight + 800){
+      document.getElementsByClassName("contact-header-container")[0].classList.add("contact-animation")
+    }
   };
 
   const scroll = (e) => {

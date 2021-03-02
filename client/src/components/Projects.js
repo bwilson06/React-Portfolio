@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Carousel} from "react-bootstrap";
 import dogstr from "../images/dogstr.png";
 import chatty from "../images/chatty.png";
+import petsfurfriends from "../images/PetsFurFriends.png";
 
 const Projects = () => {
   const [index, setIndex] = useState(0);
@@ -15,7 +16,7 @@ const Projects = () => {
   }
 
   return (
-    <div id="projects">
+    <div id="projects" className="projects">
       <Container>
         <hr></hr>
         <div className="projects-header-container">
@@ -37,6 +38,13 @@ const Projects = () => {
             <Carousel.Caption>
               <h3>Chatty</h3>
               <p>Instantly connect/chat with people around the world.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block carousel-image" src={petsfurfriends} alt="Third slide" />
+            <Carousel.Caption>
+              <h3>Pets Fur Friends</h3>
+              <p>Looking to adopt? Find the purrfect pet for you!</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

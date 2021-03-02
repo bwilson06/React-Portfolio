@@ -15,7 +15,16 @@ const MainNav = () => {
       } else {
         navbar.classList.remove("sticky")
     }
-}
+  }
+
+  const scroll = (e) => {
+    e.preventDefault()
+    let options = {
+      behavior: "smooth",
+      block: "start" 
+    }
+    document.getElementById(e.target.name).scrollIntoView(options)
+  }
 
   useEffect(() => {
         let canvas = document.getElementsByClassName("canvas")
@@ -30,10 +39,10 @@ const MainNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="nav-links" className="mr-auto">
-          <Nav.Link >Home</Nav.Link>
-          <Nav.Link >About</Nav.Link>
-          <Nav.Link >Projects</Nav.Link>
-          <Nav.Link >Contact</Nav.Link>
+          <Nav.Link name="home" onClick={(e) => scroll(e)}>Home</Nav.Link>
+          <Nav.Link name="about" onClick={(e) => scroll(e)}>About</Nav.Link>
+          <Nav.Link name="projects" onClick={(e) => scroll(e)}>Projects</Nav.Link>
+          <Nav.Link name="contact" onClick={(e) => scroll(e)}>Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

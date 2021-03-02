@@ -33,6 +33,7 @@ class Animaton extends Component {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.prepend(renderer.domElement);
     renderer.domElement.classList.add("canvas");
+    renderer.domElement.setAttribute("id", "home");
     const geometry = new THREE.BoxBufferGeometry(1.5, 1.5, 1.5);
     const edges = new THREE.EdgesGeometry(geometry);
     lineColor = 0xffffff;
@@ -108,7 +109,7 @@ class Animaton extends Component {
 
   render() {
     return (
-      <div>
+      <div id="home">
         <div id="info-top">
           <h1 className="intro-top">
             Hello, I'm<span className="name"> Bradley Wilson</span>
