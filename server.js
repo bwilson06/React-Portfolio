@@ -1,6 +1,5 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const path = require('path')
 require('dotenv/types').config()
 
 let PORT = 3001 || process.env.PORT
@@ -13,10 +12,11 @@ app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
-  app.use(express.static('dist'));
-  app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
+  app.use(express.static('client/build'));
+  // Express serve up index.html file if it doesn't recognize route
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
 }
 
 var transporter = nodemailer.createTransport({
