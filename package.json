@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "serve -s build",
-    "build": "npm run build",
     "heroku-postbuild": "npm run build"
   },
   "engines": {
