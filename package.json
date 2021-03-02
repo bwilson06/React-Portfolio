@@ -8,6 +8,14 @@
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "14.7.0",
+    "npm": "6.14.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwilson06/React-Portfolio.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
