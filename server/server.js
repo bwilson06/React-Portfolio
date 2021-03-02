@@ -1,6 +1,6 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-require('dotenv').config()
+require('dotenv/types').config()
 
 let PORT = 3001 || process.env.PORT
 
