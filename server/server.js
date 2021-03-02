@@ -10,6 +10,10 @@ let app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"))
+}
+
 var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
