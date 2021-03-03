@@ -35,7 +35,7 @@ const Contact = () => {
      }
      axios({
       method: "POST", 
-      url:"http://localhost:3000/send", 
+      url:"https://bw-dev-portfolio.herokuapp.com/send", 
       data: user
     }).then((response)=>{
       if (response.data.status === 'success') {

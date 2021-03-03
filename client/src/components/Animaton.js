@@ -61,7 +61,6 @@ class Animaton extends Component {
       starGeo.vertices.push(star);
     }
     let sprite = new THREE.TextureLoader().load("star2.png");
-    console.log(sprite);
     let starMaterial = new THREE.PointsMaterial({
       color: 0xaaaaaa,
       size: 0.1,
