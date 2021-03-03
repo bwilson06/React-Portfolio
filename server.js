@@ -33,6 +33,7 @@ var transporter = nodemailer.createTransport({
 });
 
 app.post('/send', (req, res) => {
+  console.log('yo', process.env.REACT_APP_PASS)
     var mail = {
         from: req.body.name,
         to: 'bluedirtbike6@gmail.com',
