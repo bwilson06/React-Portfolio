@@ -336,7 +336,7 @@ body {
 
 @media screen and (max-width: 500px){
   .carousel-image {
-    max-width: 400px;
+    max-width: 350px;
   }
   .about-content-container {
     display: block;
@@ -349,5 +349,12 @@ body {
     width: 100%;
     margin-top: 40px;
     text-align: center;
+  }
+  #projects {
+    height: 90vh;
+  }
+  #carousel {
+    margin-top: 40px;
+    padding: 20px;
   }
 }
