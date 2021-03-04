@@ -258,6 +258,19 @@ body {
   animation: contact-animation 1s 1;
 }
 
+
+.carousel-control-next-icon {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.carousel-control-prev-icon {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+
+
 @keyframes text {
   0%{
     color: black;

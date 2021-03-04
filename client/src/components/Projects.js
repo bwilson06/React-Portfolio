@@ -34,18 +34,21 @@ const Projects = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
+            <a href="https://chatty-react-bw.herokuapp.com/" target="_blank">
             <img className="d-block carousel-image" src={chatty} alt="Second slide" />
             <Carousel.Caption>
               <h3>Chatty</h3>
               <p>Instantly connect/chat with people around the world.</p>
             </Carousel.Caption>
+            </a>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block carousel-image" src={petsfurfriends} alt="Third slide" />
+            <a href="https://team-crush-it.github.io/Pets-Fur-Friends/" target="_blank"><img className="d-block carousel-image" src={petsfurfriends} alt="Third slide" />
             <Carousel.Caption>
               <h3>Pets Fur Friends</h3>
               <p>Looking to adopt? Find the purrfect pet for you!</p>
             </Carousel.Caption>
+            </a>
           </Carousel.Item>
         </Carousel>
         <h1 onClick={(e) => scroll(e)} className="projects-scroll"><i class="fas fa-arrow-circle-down"></i></h1>
