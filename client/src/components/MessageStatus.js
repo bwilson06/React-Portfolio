@@ -3,9 +3,12 @@ import React from "react";
 const MessageStatus = (props) => {
   if (props.status) {
     return (
+        <div>
       <h1 className="message-status" id="message-status">
         Message Sent!
       </h1>
+      <h1>poop</h1>
+      </div>
     );
   } else {
     return (
