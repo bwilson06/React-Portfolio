@@ -21,7 +21,8 @@ app.use(express.json());
   
 }
 
-var transporter = nodemailer.createTransport({
+app.post('/send', (req, res) => {
+  var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
     secure: false,
@@ -31,16 +32,15 @@ var transporter = nodemailer.createTransport({
            pass: process.env.REACT_APP_PASS
        }
 });
-
-app.post('/send', (req, res) => {
-  console.log('yo', process.env.REACT_APP_PASS)
     var mail = {
         from: req.body.name,
         to: 'bluedirtbike6@gmail.com',
         subject: 'Portfolio Contact Email',
         text: req.body.message
       }
+
       transporter.sendMail(mail, (err, data) => {
+        console.log(mail)
         if (err) {
         console.log(err)
           res.json({
@@ -53,7 +53,6 @@ app.post('/send', (req, res) => {
         }
       })
 })
-
 
 app.listen(PORT, () => {
     console.log("App running on port " + PORT + "!");

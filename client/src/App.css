@@ -204,7 +204,7 @@ body {
 
 .carousel-image {
   margin: 0 auto;
-  max-height: 500px;
+  max-height: 400px;
   width: auto;  
 }
 
@@ -219,6 +219,13 @@ body {
   font-family: 'Poppins';
   font-weight: 600;
 }
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2328a745' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+ }
+ 
+ .carousel-control-next-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2328a745' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+ }
 
 #contact {
   height: 102vh;
@@ -269,7 +276,40 @@ body {
   height: 40px !important;
 }
 
+.message-status {
+  opacity: 0;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 64px;
+}
 
+.message-status-animation {
+  display: block;
+  animation: message-status 2s 1;
+}
+
+
+@keyframes message-status {
+  0%{
+    transform: translate(-100%, -50%);
+    opacity: 10%;
+  }
+  30% {
+    opacity: 50%;
+  }
+  50%{
+    transform: translateX(-300);
+    opacity: 100%;
+  } 
+  90% {
+    opacity: 0%;
+  }
+}
 
 @keyframes text {
   0%{
@@ -345,6 +385,10 @@ body {
   .carousel-image {
     max-width: 500px;
   }
+
+  .message-status {
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -369,5 +413,8 @@ body {
   #carousel {
     margin-top: 40px;
     padding: 20px;
+  }
+  .message-status {
+    font-size: 28px;
   }
 }
