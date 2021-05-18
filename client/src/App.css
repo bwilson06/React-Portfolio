@@ -277,7 +277,6 @@ body {
 }
 
 .message-status {
-  opacity: 0;
   display: none;
   overflow: hidden;
   position: absolute;
@@ -296,16 +295,13 @@ body {
 
 @keyframes message-status {
   0%{
-    opacity: 10%;
-  }
-  30% {
-    opacity: 50%;
+    transform: translate(-200%, -50%)
   }
   50%{
-    opacity: 100%;
+    transform: translate(-50%, -50%)
   } 
   100% {
-    opacity: 0%;
+    transform: translate(200%, -50%)
   }
 }
 
