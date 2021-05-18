@@ -44,22 +44,24 @@ const Contact = () => {
           document
             .getElementById("message-status")
             .classList.add("message-status-animation");
-          setTimeout(() => {
+          /*setTimeout(() => {
             document
               .getElementById("message-status")
               .classList.remove("message-status-animation");
           }, 2000);
+          */
         } else if (response.data.status === "fail") {
           console.log("Message failed to send.");
           setStatus(false);
           document
             .getElementById("message-status")
             .classList.add("message-status-animation");
-          setTimeout(() => {
+         /* setTimeout(() => {
             document
               .getElementById("message-status")
               .classList.remove("message-status-animation");
           }, 2000);
+          */
         }
       })
       .catch((error) => {
