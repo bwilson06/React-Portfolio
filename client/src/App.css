@@ -277,6 +277,7 @@ body {
 }
 
 .message-status {
+  opacity: 0;
   display: none;
   overflow: hidden;
   position: absolute;
@@ -289,6 +290,7 @@ body {
 
 .message-status-animation {
   display: block;
+  animation: message-status 2s 1;
 }
 
 
