@@ -9,6 +9,11 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [messageStatus, setStatus] = useState(false);
 
+  const scroll = (e) => {
+    e.preventDefault();
+    document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+  }
+
   const updateName = (e) => {
     e.preventDefault();
     setName(e.target.value);
@@ -69,7 +74,6 @@ const Contact = () => {
   return (
     <div id="contact" className="contact">
       <Container>
-        <hr></hr>
         <div className="contact-header-container">
           <h1 className="contact-header">Contact</h1>
           <h4 style={{ height: "2px", color: "white" }} className="text-center">
@@ -107,6 +111,7 @@ const Contact = () => {
             Submit
           </Button>
         </Form>
+        <Button onClick={(e) => scroll(e)} className="find-me">Find me here<h1 style={{marginLeft: "8px"}}><i class="fas fa-arrow-circle-down"></i></h1></Button>
       </Container>
     </div>
   );

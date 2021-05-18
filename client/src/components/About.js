@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <div id="about">
-      <Container>
+      <Container className="about">
         <div className="about-header-container">
           <h1 className="about-header">About</h1>
           <h4 style={{ height: "2px", color: "white" }} className="text-center">

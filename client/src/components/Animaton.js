@@ -97,7 +97,7 @@ class Animaton extends Component {
   };
 
   scrollToBottom = () => {
-    document.getElementById("nav").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
   };
 
   componentDidMount() {

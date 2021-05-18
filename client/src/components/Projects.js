@@ -18,7 +18,6 @@ const Projects = () => {
   return (
     <div id="projects" className="projects">
       <Container>
-        <hr></hr>
         <div className="projects-header-container">
           <h1 className="projects-header">Projects</h1>
           <h4 style={{ height: "2px", color: "white" }} className="text-center">
@@ -72,6 +71,7 @@ const Projects = () => {
         <h1 onClick={(e) => scroll(e)} className="projects-scroll">
           <i class="fas fa-arrow-circle-down"></i>
         </h1>
+        <p className="projects-contact-link">Like what you see? <a onClick={(e) => scroll(e)} className="projects-connect-link">Connect</a> with me!</p>
       </Container>
     </div>
   );
