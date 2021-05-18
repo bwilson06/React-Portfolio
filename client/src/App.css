@@ -6,6 +6,7 @@ body {
   background-color: rgb(226, 226, 226) !important;
 }
 
+
 .container {
   border-style: solid !important;
   border-width: 1px !important;
@@ -182,10 +183,49 @@ body {
   height: auto;
 }
 
+.mern {
+  width: 50%;
+  margin-right: 10%;
+  height: 100%;
+}
+
+.skills {
+  width: 50%;
+  height: 100%;
+}
+
+.skills-header {
+  font-family: 'Poppins', 'sans serif';
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.mern-header {
+  font-family: 'Poppins', 'sans serif';
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.mern-ul {
+  font-size: 42px;
+  font-family: 'Poppins', 'sans serif';
+}
+
+.skills-ul {
+  font-family: 'Poppins', 'sans serif';
+  font-size: 21px;
+}
+
 .about-scroll {
   text-align: center;
   margin-top: 10px;
   cursor: pointer;
+}
+
+.about-arrow-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 #projects {
@@ -319,6 +359,7 @@ body {
   color: #28a745 !important;
 }
 
+
 .message-status-animation {
   display: block;
   animation: message-status 2s 1;
@@ -358,7 +399,7 @@ body {
   height: 100px;
   margin: 0 auto;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .social-link {
@@ -372,6 +413,17 @@ body {
 .social-link:hover {
   cursor: pointer;
   box-shadow: 1px 1px 150px 0px #28a745;
+}
+
+.far {
+  padding: 4px;
+  font-size: 32px;
+  color: #4a7577;
+  opacity: 80%;
+}
+
+.far:hover {
+  cursor: pointer;
 }
 
 @keyframes message-status {
@@ -469,6 +521,21 @@ body {
   .social-link {
     font-size: 90px;
   }
+  .mern-header {
+    text-align: center;
+    font-weight: bold;
+  }
+  .mern {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .skills {
+    width: 100%;
+  }
+  .skills-header {
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -499,5 +566,23 @@ body {
   }
   .social-container {
     padding-top: 30px;
+  }
+  .mern-header {
+    text-align: center;
+    font-weight: bold;
+  }
+  .mern {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .skills {
+    width: 100%;
+  }
+  .skills-header {
+    text-align: center;
+    font-weight: bold;
+  }
+  .mern-ul {
+    font-size: 33px;
   }
 }

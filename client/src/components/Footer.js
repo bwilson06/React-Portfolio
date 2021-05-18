@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <div id="footer" className="footer">
       <div className="social-container">
-        <h1 className="social-link"><i class="fab fa-twitter-square"></i></h1>
-        <h1 className="social-link"><i class="fab fa-github-square"></i></h1>
-        <h1 className="social-link"><i class="fab fa-linkedin"></i></h1>
+        <i class="fab fa-twitter-square social-link" onClick={() => window.open("https://twitter.com/Bradley03587052", "_blank")}></i>
+        <i class="fab fa-github-square social-link" onClick={() => window.open("https://github.com/bwilson06", "_blank")}></i>
+        <i class="fab fa-linkedin social-link" onClick={() => window.open("https://www.linkedin.com/in/bradley-wilson-698405212/", "_blank")}></i>
       </div>
     </div>
   );
