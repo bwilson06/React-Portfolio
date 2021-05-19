@@ -426,6 +426,10 @@ body {
   cursor: pointer;
 }
 
+.op {
+  color:rgb(180, 177, 177) !important;
+}
+
 @keyframes message-status {
   0%{
     transform: translate(-200%, -50%)

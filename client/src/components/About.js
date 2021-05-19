@@ -91,8 +91,7 @@ const About = () => {
           </div>
           <div className="about-arrow-container">
             <i
-              style={{ color: "rgb(212,212,212)"}}
-              class="far fa-arrow-alt-circle-left"
+              class="far fa-arrow-alt-circle-left op"
             ></i>
             <i
               class="far fa-arrow-alt-circle-right"
@@ -158,8 +157,7 @@ const About = () => {
               onClick={() => setPage(0)}
             ></i>
             <i
-              style={{ color: "rgb(212,212,212)"}}
-              class="far fa-arrow-alt-circle-right"
+              class="far fa-arrow-alt-circle-right op"
             ></i>
           </div>
           <h1 onClick={(e) => scroll(e)} className="about-scroll">
