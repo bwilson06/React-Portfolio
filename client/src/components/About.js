@@ -72,6 +72,7 @@ const About = () => {
             </div>
             <div className="my-content">
               <p
+                className="about-me-text"
                 style={{
                   overflowWrap: "break-word",
                   fontSize: "20px",

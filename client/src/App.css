@@ -429,6 +429,12 @@ body {
   color:rgb(180, 177, 177) !important;
 }
 
+.watermark {
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
 @keyframes message-status {
   0%{
     transform: translate(-200%, -50%)
@@ -557,6 +563,9 @@ body {
     margin-top: 40px;
     text-align: center;
   }
+  .about-me-text {
+    font-size: 16px !important;
+  }
   #carousel {
     margin-top: 40px;
     padding: 20px;
@@ -568,7 +577,7 @@ body {
     font-size: 80px;
   }
   .social-container {
-    padding-top: 30px;
+    padding-top: 50px;
   }
   .mern-header {
     text-align: center;
@@ -581,14 +590,19 @@ body {
   .skills {
     width: 100%;
   }
+  .skills-li {
+    font-size: 16px;
+  }
   .skills-header {
     text-align: center;
     font-weight: bold;
   }
   .mern-ul {
-    font-size: 33px;
+    font-size: 22px;
   }
   .container {
-    margin-bottom: 60px !important;
+    margin: 0px 0px 100px 0px !important;
+    padding: 30px 0px 0px 0px !important;
+    width: 100% !important;
   }
 }
