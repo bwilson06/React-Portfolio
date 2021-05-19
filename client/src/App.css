@@ -585,4 +585,7 @@ body {
   .mern-ul {
     font-size: 33px;
   }
+  .container {
+    margin-bottom: 60px !important;
+  }
 }

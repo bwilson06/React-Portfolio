@@ -91,7 +91,7 @@ const About = () => {
           </div>
           <div className="about-arrow-container">
             <i
-              style={{ opacity: "30%" }}
+              style={{ color: "#B3C0C1"}}
               class="far fa-arrow-alt-circle-left"
             ></i>
             <i
@@ -158,7 +158,7 @@ const About = () => {
               onClick={() => setPage(0)}
             ></i>
             <i
-              style={{ opacity: "30%" }}
+              style={{ color: "#B3C0C1"}}
               class="far fa-arrow-alt-circle-right"
             ></i>
           </div>
